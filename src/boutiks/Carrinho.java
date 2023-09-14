@@ -9,8 +9,17 @@ public class Carrinho {
         produtos.add(preco);
     }
     
+    public void motrarProdutos() {
+        for (float valor : produtos) {
+            
+        }
+    }
+    
     public float calcularTotal() {
+        float total = 0;
+        for(float valor : produtos) total += valor;
         
+        return total;
     }
     
     public void aplicarDesconto(float porcentagem) {
