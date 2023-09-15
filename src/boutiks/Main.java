@@ -29,7 +29,7 @@ public class Main {
                 
                 case '2' : {
                     System.out.println(carrinho.mostrarProdutos());
-                    System.out.println("\nTotal: R$" + carrinho.calcularTotal());
+                    System.out.println("Total: R$" + carrinho.calcularTotal());
                     
                     break;
                 }
@@ -37,17 +37,13 @@ public class Main {
                 case '3' : {
                     System.out.println(carrinho.mostrarProdutos());
                     System.out.println("\nDigite o número do item para removê-lo: ");
+                    carrinho.removerItem(sc.nextInt());
                     
                     break;
                 }
                 
                 default : System.out.println("Opção inválida! verifique a opção inserida"); break;
             }
-        
-            
-        
-
-        
                         
         } while(opcao != '0');
     } 

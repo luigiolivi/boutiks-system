@@ -10,9 +10,9 @@ public class Carrinho {
     }
     
     public String mostrarProdutos() {
-        String lista = null;
+        String lista = "\n";
         for (int i = 0; i < produtos.size(); i++) {
-            lista += "\n" + (i + 1) + "R$" + produtos.get(i);
+            lista += "\n" + (i + 1) + " — R$" + produtos.get(i);
         }
         
         return lista;
@@ -26,6 +26,6 @@ public class Carrinho {
     }
     
     public void removerItem(int id) {
-        produtos.remove(id);
+        produtos.remove(id - 1);
     }
 }
