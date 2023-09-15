@@ -9,10 +9,13 @@ public class Carrinho {
         produtos.add(preco);
     }
     
-    public void motrarProdutos() {
-        for (float valor : produtos) {
-            
+    public String mostrarProdutos() {
+        String lista = null;
+        for (int i = 0; i < produtos.size(); i++) {
+            lista += "\n" + (i + 1) + "R$" + produtos.get(i);
         }
+        
+        return lista;
     }
     
     public float calcularTotal() {
@@ -22,7 +25,7 @@ public class Carrinho {
         return total;
     }
     
-    public void aplicarDesconto(float porcentagem) {
-        
+    public void removerItem(int id) {
+        produtos.remove(id);
     }
 }
