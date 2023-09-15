@@ -21,15 +21,8 @@ public class Main {
                 }
                     
                 case '1' : {
-                    char continuar = 's';
-        
-                    do {
-                        System.out.println("\nDigite o valor do produto para adicionar ao carrinho: ");
-                        carrinho.adicionarProduto(sc.nextFloat());
-            
-                        System.out.println("Deseja adicionar mais um produto ao carrinho? (S/N)");
-                        continuar = sc.next().charAt(0);
-                    } while(continuar == 'S' || continuar == 's');
+                    System.out.println("\nDigite o valor do produto para adicionar ao carrinho: ");
+                    carrinho.adicionarProduto(sc.nextFloat());
                     
                     break;
                 }
@@ -37,16 +30,18 @@ public class Main {
                 case '2' : {
                     System.out.println(carrinho.mostrarProdutos());
                     System.out.println("\nTotal: R$" + carrinho.calcularTotal());
+                    
+                    break;
                 }
                 
                 case '3' : {
                     System.out.println(carrinho.mostrarProdutos());
                     System.out.println("\nDigite o número do item para removê-lo: ");
+                    
+                    break;
                 }
                 
-                case '4' : {
-                    
-                }
+                default : System.out.println("Opção inválida! verifique a opção inserida"); break;
             }
         
             
